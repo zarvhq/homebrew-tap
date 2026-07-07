@@ -5,23 +5,23 @@
 class RepoMonitor < Formula
   desc "Monitor open PRs and active CIs for a GitHub org from the terminal"
   homepage "https://github.com/zarvhq/repo-monitor"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   depends_on "gh"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.8/repo-monitor_darwin_amd64.tar.gz"
-      sha256 "0e413cd0fab9b4f227dfd8c6f9ae49afc0ab404c72f8773bfb30617104b02656"
+      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.9/repo-monitor_darwin_amd64.tar.gz"
+      sha256 "6dd1c43989f3654b2cc0496c6c3291054ba4158eb78bfe3830746b74ea1b2119"
 
       define_method(:install) do
         bin.install "repo-monitor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.8/repo-monitor_darwin_arm64.tar.gz"
-      sha256 "90fd6e2de7d516b328c27ac09b3d2b4b5f089fcac3fd7211cdfdd6b7fb022dc2"
+      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.9/repo-monitor_darwin_arm64.tar.gz"
+      sha256 "6c176569a099905d6f4af182aa38468962d02812aaf3466c3fdeb1550c70227f"
 
       define_method(:install) do
         bin.install "repo-monitor"
@@ -31,15 +31,15 @@ class RepoMonitor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.8/repo-monitor_linux_amd64.tar.gz"
-      sha256 "66b9aa52a13242cfe0aa01d70a913745e0194170d640bc2fa17a1bf511ccc2a9"
+      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.9/repo-monitor_linux_amd64.tar.gz"
+      sha256 "9579a7ffb6c11eb7266cf5579f4f84e7ed0df724d0e893e7cb65838928e651fd"
       define_method(:install) do
         bin.install "repo-monitor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.8/repo-monitor_linux_arm64.tar.gz"
-      sha256 "3fb3e4681ccae66ffdeb84a33a484c8cb3d308c67f1fb7824fc1cdbcfb850aea"
+      url "https://github.com/zarvhq/homebrew-tap/releases/download/v0.1.9/repo-monitor_linux_arm64.tar.gz"
+      sha256 "fba7dfc1bce4045f8ac492cfa5ab1cfd3ae7da266c5d9dc5fd7d4b6250353a3d"
       define_method(:install) do
         bin.install "repo-monitor"
       end
